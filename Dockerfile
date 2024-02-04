@@ -1,12 +1,12 @@
 FROM debian:jessie
-MAINTAINER leejoneshane@gmail.com
+MAINTAINER kristofer@rawbytes.dev
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV LANG zh_TW.UTF-8
-ENV LANGUAGE zh_TW.utf-8
-ENV LC_ALL zh_TW.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.utf-8
+ENV LC_ALL en_US.UTF-8
 
-RUN echo "zh_TW.UTF-8 UTF-8" > /etc/locale.gen \
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && apt-get update \
     && apt-get -y --no-install-recommends install locales wget curl gnupg apt-utils dialog \
     && echo "deb http://free.nchc.org.tw/drbl-core drbl stable" >> /etc/apt/sources.list \
